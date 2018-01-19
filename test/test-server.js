@@ -34,10 +34,10 @@ const user3 = Object.assign(user1, {
     'description': 'caballero de la noche',
 });
 
-function checkUser(res_user, user) {
-    Object.keys(user).forEach(key => {
-	res_user.should.have.property(key);
-	res_user[key].should.equal(user[key]);	
+function checkUser(responseUser, originalUser) {
+    Object.keys(originalUser).forEach(key => {
+	responseUser.should.have.property(key);
+	responseUser[key].should.equal(originalUser[key]);
     });
 }
 
